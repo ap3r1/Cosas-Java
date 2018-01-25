@@ -298,7 +298,15 @@ public class Practicas {
 					numeros[j] = aux;
 				}
 	}
-
+	public void ordenaEnteros(ArrayList<Integer> numeros) {
+		for (int i = 0; (i < numeros.size() -1); i++)
+			for (int j = i + 1; j < numeros.size(); j++)
+				if (numeros.get(i) > numeros.get(j)) {
+					Integer aux = numeros.get(i);
+					numeros.set(i,numeros.get(j));
+					numeros.set(j,aux);
+				}
+	}
 	public void ordenaClasificacion(int[] numeros, String[] equipos) {
 		for (int i = 0; i < numeros.length - 1; i++)
 			for (int j = i + 1; j < numeros.length; j++)
